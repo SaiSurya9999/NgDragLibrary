@@ -68,11 +68,11 @@ export class NgDragDirective implements OnInit {
     //     console.log(("X: "+(x + that.offset[0])) +" || Y: "+(y + that.offset[1]))
          }
          else{
-          if(((x + that.offset[0]) >= boundaryX) && ((x + that.offset[0]) <= boundaryX) ){
+          if(((x + that.offset[0]) >= boundaryX) ){
             div.style.left = (x + that.offset[0]) + 'px';
             
            }
-           if(((y + that.offset[1]) >= boundaryY) && ((y + that.offset[1]) <= boundaryY1)){
+           if(((y + that.offset[1]) >= boundaryY)){
             div.style.top = (y + that.offset[1]) + 'px';
            }
          } 

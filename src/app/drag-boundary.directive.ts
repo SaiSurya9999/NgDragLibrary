@@ -7,12 +7,13 @@ import { DragService } from './drag.service';
 export class DragBoundaryDirective implements OnInit {
 
   constructor(private el: ElementRef, private dragService: DragService) {
-    var div = el.nativeElement;
-    this.boundaryRefresh(div);
-    this.windowListner(div);
+ 
    }
    ngOnInit(){
-
+    var div = this.el.nativeElement;
+  
+    this.boundaryRefresh(div);
+    this.windowListner(div);
    }
 
    windowListner(div){
@@ -22,7 +23,7 @@ export class DragBoundaryDirective implements OnInit {
      });
    }
    boundaryRefresh(div){
-    let arr:Array<any> = [div.offsetTop, div.offsetLeft,(div.offsetWidth),(div.offsetHeight) ];
+    let arr:Array<any> = [div.offsetTop, div.offsetLeft,window.outerWidth -(div.offsetLeft + div.offsetWidth),window.outerHeight - (div.offsetTop + div.offsetHeight) ];
     this.dragService.setBoundary(arr);
    // console.log(div.offsetTop);
     //console.log(div.offsetLeft);
