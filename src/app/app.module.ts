@@ -4,11 +4,13 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgDragDirective } from './ng-drag.directive';
+import { DragBoundaryDirective } from './drag-boundary.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NgDragDirective
+    NgDragDirective,
+    DragBoundaryDirective
   ],
   imports: [
     BrowserModule,
