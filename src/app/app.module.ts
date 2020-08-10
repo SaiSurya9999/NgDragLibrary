@@ -3,10 +3,12 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { NgDragDirective } from './ng-drag.directive';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NgDragDirective
   ],
   imports: [
     BrowserModule,
