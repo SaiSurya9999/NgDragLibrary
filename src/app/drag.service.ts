@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class DragService {
-
+  parent:any = "";
   boundaries:Array<any> = [];
   constructor() { }
 
@@ -12,4 +12,9 @@ export class DragService {
     this.boundaries = arr;
     
   }
+  setParent(el){
+    this.parent = el;
+    console.log(this.parent);
+  }
+  
 }

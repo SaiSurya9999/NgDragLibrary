@@ -11,7 +11,7 @@ export class DragBoundaryDirective implements OnInit {
    }
    ngOnInit(){
     var div = this.el.nativeElement;
-  
+    this.dragService.setParent(div);
     this.boundaryRefresh(div);
     this.windowListner(div);
    }
@@ -23,10 +23,12 @@ export class DragBoundaryDirective implements OnInit {
      });
    }
    boundaryRefresh(div){
-    let arr:Array<any> = [div.offsetTop, div.offsetLeft,window.outerWidth -(div.offsetLeft + div.offsetWidth),window.outerHeight - (div.offsetTop + div.offsetHeight) ];
+    let arr:Array<any> = [div.offsetTop, div.offsetLeft,window.outerWidth -(div.offsetLeft + div.offsetWidth),window.outerHeight- (div.offsetTop + div.offsetHeight) ];
+    console.log(div.getBoundingClientRect())
+    console.log(window.screen.height);
     this.dragService.setBoundary(arr);
    // console.log(div.offsetTop);
-    //console.log(div.offsetLeft);
+    //console.log(div.offsetLeft); 
    }
 
 }

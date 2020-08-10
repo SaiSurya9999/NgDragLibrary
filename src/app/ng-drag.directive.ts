@@ -32,7 +32,7 @@ export class NgDragDirective implements OnInit {
         div.offsetLeft - e.clientX,
         div.offsetTop - e.clientY
       ];
-    }, true);
+    }, true); 
   }
 
   //Handling onLeave Event
@@ -56,23 +56,23 @@ export class NgDragDirective implements OnInit {
         let y = event.clientY;
         let boundaryX = that.dragService.boundaries[1];
         let boundaryY = that.dragService.boundaries[0];
-        let boundaryX1 = that.dragService.boundaries[2];
-        let boundaryY1 = that.dragService.boundaries[3];
-        console.log(that.dragService.boundaries);
-   console.log(("X: "+(x + that.offset[0])) +" || Y: "+(y + that.offset[1]))
-   // console.log("TOP "+boundaryY+" || "+"LEFT "+boundaryX);
+          
+        var bounX = (that.dragService.parent.getBoundingClientRect().width - that.el.nativeElement.getBoundingClientRect().width) +   that.dragService.parent.getBoundingClientRect().x;
+          bounX = Math.round(bounX);
+          var bounY = (that.dragService.parent.getBoundingClientRect().height - that.el.nativeElement.getBoundingClientRect().height) +   that.dragService.parent.getBoundingClientRect().y;
+          bounY = Math.round(bounY);
+         console.log(bounY);
+          //If no boundary is set          
           if(that.dragService.boundaries.length == 0){
-     //  console.log("TOP "+boundaryY+" || "+"LEFT "+boundaryX);
             div.style.left = (x + that.offset[0]) + 'px';
             div.style.top = (y + that.offset[1]) + 'px';
-    //     console.log(("X: "+(x + that.offset[0])) +" || Y: "+(y + that.offset[1]))
-         }
+       }
          else{
-          if(((x + that.offset[0]) >= boundaryX) ){
+          if(((x + that.offset[0]) >= boundaryX) && ((x + that.offset[0]) <= bounX) ){
             div.style.left = (x + that.offset[0]) + 'px';
             
            }
-           if(((y + that.offset[1]) >= boundaryY)){
+           if(((y + that.offset[1]) >= boundaryY) && ((y + that.offset[1]) <= bounY)){
             div.style.top = (y + that.offset[1]) + 'px';
            }
          } 
