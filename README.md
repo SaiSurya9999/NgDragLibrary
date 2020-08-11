@@ -10,15 +10,15 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Step - 1
 
-> npm i ngconf-pagination --save  
-[NPM Package Link](https://www.npmjs.com/package/ngconf-drag-drop "ngconf-drag-drop")  
+> npm i ngconf-dragdrop --save  
+[NPM Package Link](https://www.npmjs.com/package/ngconf-dragdrop "ngconf-dragdrop")  
 
 ## Step - 2  
 Import NgconfDragDropModule in app.module.ts file.  
 
 **app.module.ts**
 ```typescript
-import {NgconfDragDropModule} from 'ngconf-drag-drop';
+import {NgconfDragDropModule} from 'ngconf-dragdrop';
  imports: [
     BrowserModule,
     AppRoutingModule,
