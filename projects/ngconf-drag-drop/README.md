@@ -42,7 +42,8 @@ modify the code. You can have a look in our stackbliz demo for more clarity.
  border: dotted 3px;
  min-height: 500px;
 }
-```
+```  
+> If you dont use drag boundary then element can be moved anywhere in the document.  
 **app.component.html**
 ```html
 <div class="container mt-5 " ngDragBoundary>
