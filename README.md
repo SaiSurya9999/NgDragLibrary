@@ -1,27 +1,61 @@
-# NgDragLibrary
+# Ngconf-DragDrop Library
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.5.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.5.  
 
-## Development server
+> ![ngconf-dragdrop](https://img.icons8.com/color/48/000000/resize-four-directions.png "Move")  Drag Drop feature for Angular.  
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+### Demo Link   
+[Stackblitz Demo](https://stackblitz.com/edit/ngconf-dragdrop "ngconf-dragdrop Demo") 
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Step - 1
 
-## Build
+> npm i ngconf-pagination --save  
+[NPM Package Link](https://www.npmjs.com/package/ngconf-drag-drop "ngconf-drag-drop")  
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Step - 2  
+Import NgconfDragDropModule in app.module.ts file.  
 
-## Running unit tests
+**app.module.ts**
+```typescript
+import {NgconfDragDropModule} from 'ngconf-drag-drop';
+ imports: [
+    BrowserModule,
+    AppRoutingModule,
+    NgconfDragDropModule,
+    HttpClientModule
+  ]
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Step - 3
+This step is to quick start the usage of package later with the understanding of workflow you can  
+modify the code. You can have a look in our stackbliz demo for more clarity.  
+**app.component.css**
+```css
+.drag{
+    height: 100px;
+    width: 100px;
+    border: solid 3px;
+}
 
-## Running end-to-end tests
+.container{
+ border: dotted 3px;
+ min-height: 500px;
+}
+```  
+> If you dont use drag boundary then element can be moved anywhere in the document.  
+**app.component.html**
+```html
+<div class="container mt-5 " ngDragBoundary>
+    <div class="drag" ngDrag>
+       <h5 class="text-muted text-center mt-3">I am Draggable :)</h5>
+    </div>
+</div> 
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Further help
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+
+
+> That's it you are good to go. Happy Coding :)
