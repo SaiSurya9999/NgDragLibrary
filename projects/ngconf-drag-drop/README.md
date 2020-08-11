@@ -1,24 +1,61 @@
-# NgconfDragDrop
+# Ngconf-DragDrop Library
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.6.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.5.  
 
-## Code scaffolding
+> ![ngconf-dragdrop](https://img.icons8.com/color/48/000000/resize-four-directions.png "Move")  Drag Drop feature for Angular.  
 
-Run `ng generate component component-name --project ngconf-dragDrop` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ngconf-dragDrop`.
-> Note: Don't forget to add `--project ngconf-dragDrop` or else it will be added to the default project in your `angular.json` file. 
 
-## Build
+### Demo Link   
+[Stackblitz Demo](https://stackblitz.com/edit/ngconf-dragdrop "ngconf-dragdrop Demo") 
 
-Run `ng build ngconf-dragDrop` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Step - 1
 
-## Publishing
+> npm i ngconf-pagination --save  
+[NPM Package Link](https://www.npmjs.com/package/ngconf-drag-drop "ngconf-drag-drop")  
 
-After building your library with `ng build ngconf-dragDrop`, go to the dist folder `cd dist/ngconf-drag-drop` and run `npm publish`.
+## Step - 2  
+Import NgconfDragDropModule in app.module.ts file.  
 
-## Running unit tests
+**app.module.ts**
+```typescript
+import {NgconfDragDropModule} from 'ngconf-drag-drop';
+ imports: [
+    BrowserModule,
+    AppRoutingModule,
+    NgconfDragDropModule,
+    HttpClientModule
+  ]
+```
 
-Run `ng test ngconf-dragDrop` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Step - 3
+This step is to quick start the usage of package later with the understanding of workflow you can  
+modify the code. You can have a look in our stackbliz demo for more clarity.  
+**app.component.css**
+```css
+.drag{
+    height: 100px;
+    width: 100px;
+    border: solid 3px;
+}
 
-## Further help
+.container{
+ border: dotted 3px;
+ min-height: 500px;
+}
+```  
+> If you dont use drag boundary then element can be moved anywhere in the document.  
+**app.component.html**
+```html
+<div class="container mt-5 " ngDragBoundary>
+    <div class="drag" ngDrag>
+       <h5 class="text-muted text-center mt-3">I am Draggable :)</h5>
+    </div>
+</div> 
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+```
+
+
+
+
+> That's it you are good to go. Happy Coding :)
