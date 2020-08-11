@@ -1,0 +1,34 @@
+{
+  "name": "ngconf-dragdrop",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "^10.0.6",
+    "@angular/core": "^10.0.6"
+  },
+  "author": {
+    "name": "Sai Surya Teja",
+    "email": "tsaisurya@gmail.com"
+  },
+  "description": "Angular Library to provide Drag Interface to Angular apps.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SaiSurya9999/NgDragLibrary.git"
+  },
+  "bugs": {
+    "url": "https://github.com/SaiSurya9999/NgDragLibrary/issues",
+    "email": "tsaisurya@gmail.com"
+  },
+  "homepage": "https://github.com/SaiSurya9999/NgDragLibrary",
+  "license": "MIT",
+  "keywords": [
+    "angular",
+    "javascript",
+    "drag",
+    "drop",
+    "ngx-dragdrop",
+    "ngconf-drag-drop"
+  ],
+  "dependencies": {
+    "tslib": "^2.0.0"
+  }
+}

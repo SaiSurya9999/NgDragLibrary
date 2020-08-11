@@ -1,12 +1,12 @@
-import { Directive, ElementRef, OnInit, Input } from '@angular/core';
-import { DragService } from '../app/drag.service';
+import { Directive, ElementRef, OnInit } from '@angular/core';
+import { DragService } from './drag.service';
 
 @Directive({
   selector: '[ngDrag]'
 })
 export class NgDragDirective implements OnInit {
 
-  //@Input() boundary:any;
+  
 
   isDown: boolean = false;
   offset: any = [0, 0];

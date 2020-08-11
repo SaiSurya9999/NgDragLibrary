@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {NgconfDragDropModule} from 'ngconf-drag-drop';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,12 +10,11 @@ import { DragBoundaryDirective } from './drag-boundary.directive';
 @NgModule({
   declarations: [
     AppComponent,
-    NgDragDirective,
-    DragBoundaryDirective
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgconfDragDropModule
   ],
   providers: [],
   bootstrap: [AppComponent]

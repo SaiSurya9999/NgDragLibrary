@@ -12,6 +12,12 @@
     },
     {
       "path": "./tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/ngconf-drag-drop/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/ngconf-drag-drop/tsconfig.spec.json"
     }
 ]
 }
