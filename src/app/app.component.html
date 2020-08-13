@@ -1,6 +1,7 @@
-<div class="container mt-5 " ngDragBoundary>
-    <div class="drag" ngDrag>
-       <h5 class="text-muted text-center mt-3">I am Draggable :)</h5>
+<div class="container-fluid">
+    <div class="col-md-4 mr-auto ml-auto mt-5" >
+        <ul class="list-group" ngDropList>
+            <li ngDragSort class="list-group-item" *ngFor="let item of testArray;">{{item}}</li>
+          </ul>
     </div>
-</div> 
-
+</div>
